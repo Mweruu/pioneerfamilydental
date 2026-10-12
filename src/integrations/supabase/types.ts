@@ -14,7 +14,45 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      appointments: {
+        Row: {
+          created_at: string
+          id: string
+          patient_name: string
+          phone: string
+          preferred_date: string
+          preferred_time: string
+          service: string
+          status: string
+          user_id: string
+          whatsapp_consent: boolean
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          patient_name: string
+          phone: string
+          preferred_date: string
+          preferred_time: string
+          service: string
+          status?: string
+          user_id: string
+          whatsapp_consent?: boolean
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          patient_name?: string
+          phone?: string
+          preferred_date?: string
+          preferred_time?: string
+          service?: string
+          status?: string
+          user_id?: string
+          whatsapp_consent?: boolean
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
