@@ -1,6 +1,6 @@
 import { Link } from '@tanstack/react-router';
 import { useState, type ReactNode } from 'react';
-import { ArrowUpRight, ArrowRight, CalendarDays, Phone, Clock3, MessageCircle, ShieldCheck, HeartHandshake, Tooth, Glasses, Sparkles, CheckCircle2 } from 'lucide-react';
+import { ArrowUpRight, ArrowRight, CalendarDays, Phone, Clock3, MessageCircle, ShieldCheck, HeartHandshake, SmilePlus as Tooth, Glasses, Sparkles, CheckCircle2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import logo from '@/assets/pioneer-logo.jpeg.asset.json';
 import clinic from '@/assets/pioneer-clinic.jpeg.asset.json';
