@@ -1,24 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
-
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
-export const Route = createFileRoute("/")({
-  component: Index,
-});
-
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
+import { createFileRoute } from '@tanstack/react-router';
+import { ClinicSite, HomePage } from '@/components/clinic/site';
+export const Route=createFileRoute('/')({head:()=>({meta:[{title:'Pioneer Dental & Optical Clinic | Book Your Visit'},{name:'description',content:'Family dental and optical care at Pioneer. Request your appointment, or call +254 705 188 578.'},{property:'og:title',content:'Pioneer Dental & Optical Clinic | Book Your Visit'},{property:'og:description',content:'Brighter smiles. Clearer vision. Request your family’s next visit at Pioneer.'},{property:'og:type',content:'website'},{name:'twitter:card',content:'summary_large_image'}]}),component:Index});
+function Index(){return <ClinicSite><HomePage/></ClinicSite>;}

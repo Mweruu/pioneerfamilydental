@@ -1,0 +1,4 @@
+import { createFileRoute } from '@tanstack/react-router';
+import { ClinicSite, ServiceSection, PageBanner } from '@/components/clinic/site';
+export const Route=createFileRoute('/services')({head:()=>({meta:[{title:'Dental & Optical Services | Pioneer Clinic'},{name:'description',content:'Explore dental check-ups, scaling, whitening, orthodontics and optical consultations at Pioneer.'},{property:'og:title',content:'Dental & Optical Services | Pioneer Clinic'},{property:'og:description',content:'Explore dental and optical care for the whole family.'},{property:'og:type',content:'website'},{name:'twitter:card',content:'summary_large_image'}]}),component:Services});
+function Services(){return <ClinicSite><PageBanner label="Our services" title="Care for every smile and every vision." copy="Explore our dental and optical services, and request a consultation."/><ServiceSection full/></ClinicSite>;}
