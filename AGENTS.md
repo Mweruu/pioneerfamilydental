@@ -10,5 +10,7 @@
 <!-- LOVABLE:END -->
 
 - Keep clinic branding and shared page presentation in the clinic components; leaf routes own unique metadata.
-- Store appointment requests as authenticated patient-owned records protected by RLS; preferred times are not confirmed availability.
+- Store appointment requests in patient_records with nullable guest ownership and insert-only guest RLS; validate any supplied session and preserve authenticated ownership so patient details stay private. Preferred times are not confirmed availability.
+- The public doctor sign-in surface loads private records only through authenticated server functions and RLS checking protected user_roles; profiles contain names only, never privileges.
+- Keep FDI tooth numbering and patient edit validation in a shared dental-chart module so the saved chart and clinical validation agree.
 - Do not send WhatsApp reminders until a Business connection and approved templates are configured; consent does not imply delivery.
