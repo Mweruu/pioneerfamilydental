@@ -15,6 +15,20 @@
       "when": 1791866000153,
       "tag": "0001_doctor_patient_records",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1792379668813,
+      "tag": "0002_add_admin_role",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1792379682947,
+      "tag": "0003_admin_access",
+      "breakpoints": true
     }
   ]
 }
